@@ -3,349 +3,563 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="YFcgHlDBlJPcXpiMwqek9uET-ZU_uxOxkFFJ_NVm5kA">
-<title>EmojiDB – Search, Copy & Explore Every Emoji</title>
-
-<meta name="description" content="Learn about EmojiDB, a free emoji database where you can search, copy, and explore emoji meanings, Unicode values, and categories.">
+<meta name="google-site-verification" content="YFcgHlDBlJPcXpiMwqek9uET-ZU_uxOxkFFJ_NVm5kA">
+<title>EmojiDB – Free Emoji Database to Search, Copy &amp; Explore Unicode Emojis</title>
+<meta name="description" content="EmojiDB is a free emoji database and copy-paste library. Browse EmojiDB collections, use the EmojiDB emoji keyboard, learn meanings, and explore Unicode emojis on emojidb.info.">
+<meta name="keywords" content="emojidb, emoji db, emoji database, emoji keyboard, copy paste emoji, unicode emoji, emojidb.info">
+<meta name="author" content="EmojiDB">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://emojidb.info/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EmojiDB">
+<meta property="og:title" content="EmojiDB – Free Emoji Database to Search, Copy &amp; Explore Unicode Emojis">
+<meta property="og:description" content="EmojiDB is a free emoji database and copy-paste library. Browse EmojiDB collections, use the EmojiDB emoji keyboard, and explore Unicode emojis on emojidb.info.">
+<meta property="og:url" content="https://emojidb.info/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="EmojiDB – Free Emoji Database to Search, Copy &amp; Explore Unicode Emojis">
+<meta name="twitter:description" content="EmojiDB is a free emoji database and copy-paste library. Use the EmojiDB emoji keyboard and explore collections on emojidb.info.">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-    font-family:Inter,Arial,sans-serif;
-    background:#f5f7fb;
-    color:#222;
-    line-height:1.8;
+  font-family:Georgia,"Times New Roman",serif;
+  background:#0f172a;
+  color:#1e293b;
+  line-height:1.75;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 10% -10%,#1e3a5f 0%,transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 0%,#164e63 0%,transparent 50%),
+    linear-gradient(180deg,#0f172a 0%,#111827 100%);
+  min-height:100vh;
 }
-
+.wrap{width:min(920px,94%);margin:0 auto}
 header{
-    background:linear-gradient(135deg,#2563eb,#7c3aed);
-    color:#fff;
-    padding:80px 20px;
-    text-align:center;
+  padding:72px 0 48px;
+  color:#f8fafc;
+  text-align:left;
 }
-
+header .brand{
+  font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;
+  font-size:13px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:#67e8f9;
+  font-weight:700;
+  margin-bottom:14px;
+}
 header h1{
-    font-size:48px;
-    margin-bottom:15px;
+  font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;
+  font-size:clamp(2.4rem,6vw,3.4rem);
+  font-weight:800;
+  letter-spacing:-.03em;
+  line-height:1.1;
+  margin-bottom:16px;
 }
-
-header p{
-    max-width:750px;
-    margin:auto;
-    font-size:18px;
-    opacity:.95;
+header .lead{
+  font-size:1.125rem;
+  max-width:640px;
+  color:#cbd5e1;
+  margin-bottom:28px;
 }
-
 .btn{
-    display:inline-block;
-    margin-top:30px;
-    padding:14px 28px;
-    background:#fff;
-    color:#2563eb;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-    transition:.3s;
+  display:inline-block;
+  padding:14px 26px;
+  background:#22d3ee;
+  color:#0f172a;
+  text-decoration:none;
+  border-radius:10px;
+  font-family:ui-sans-serif,system-ui,sans-serif;
+  font-weight:700;
+  font-size:15px;
+  transition:transform .2s,box-shadow .2s;
+  box-shadow:0 8px 24px rgba(34,211,238,.25);
 }
-
-.btn:hover{
-    transform:translateY(-2px);
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(34,211,238,.35)}
+.btn-ghost{
+  margin-left:12px;
+  background:transparent;
+  color:#e2e8f0;
+  border:1px solid rgba(226,232,240,.35);
+  box-shadow:none;
 }
-
-.container{
-    width:min(1100px,92%);
-    margin:50px auto;
+.btn-ghost:hover{border-color:#22d3ee;color:#22d3ee;box-shadow:none}
+main{
+  background:#f8fafc;
+  border-radius:24px 24px 0 0;
+  padding:48px 0 80px;
+  color:#1e293b;
 }
-
-section{
-    background:#fff;
-    margin-bottom:30px;
-    border-radius:14px;
-    padding:35px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+article section{margin-bottom:42px}
+h2{
+  font-family:ui-sans-serif,system-ui,sans-serif;
+  font-size:1.55rem;
+  font-weight:800;
+  letter-spacing:-.02em;
+  color:#0f172a;
+  margin-bottom:14px;
+  padding-top:8px;
 }
-
-section h2{
-    color:#111827;
-    margin-bottom:18px;
+h3{
+  font-family:ui-sans-serif,system-ui,sans-serif;
+  font-size:1.15rem;
+  font-weight:700;
+  color:#0f172a;
+  margin:22px 0 10px;
 }
-
-section p{
-    margin-bottom:18px;
+p{margin-bottom:16px;font-size:1.05rem;color:#334155}
+ul,ol{margin:0 0 18px 1.25rem;color:#334155}
+li{margin-bottom:8px}
+a{color:#0891b2;text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:#0e7490}
+.eeat{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:14px;
+  margin:22px 0 8px;
 }
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-    margin-top:25px;
+.eeat-card{
+  background:#fff;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  padding:18px 16px;
+  font-family:ui-sans-serif,system-ui,sans-serif;
 }
-
-.card{
-    background:#f8fafc;
-    border:1px solid #e5e7eb;
-    border-radius:10px;
-    padding:20px;
-    text-align:center;
+.eeat-card strong{
+  display:block;
+  font-size:13px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#0891b2;
+  margin-bottom:8px;
 }
-
-.card h3{
-    margin-bottom:10px;
+.eeat-card p{margin:0;font-size:.92rem;line-height:1.55;font-family:Georgia,serif}
+.kb{
+  background:#0f172a;
+  border-radius:16px;
+  padding:18px 14px 14px;
+  margin:20px 0 10px;
+  box-shadow:0 20px 50px rgba(15,23,42,.18);
 }
-
+.kb-bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:12px;
+  padding:0 4px;
+  font-family:ui-sans-serif,system-ui,sans-serif;
+}
+.kb-bar span{color:#94a3b8;font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.kb-toast{
+  color:#67e8f9;
+  font-size:13px;
+  font-weight:600;
+  min-height:1.2em;
+  opacity:0;
+  transition:opacity .2s;
+}
+.kb-toast.show{opacity:1}
+.kb-grid{
+  display:grid;
+  grid-template-columns:repeat(8,1fr);
+  gap:6px;
+}
+@media (max-width:560px){
+  .kb-grid{grid-template-columns:repeat(6,1fr)}
+  .btn-ghost{display:block;margin:14px 0 0;text-align:center}
+}
+.kb-key{
+  appearance:none;
+  border:none;
+  background:#1e293b;
+  border-radius:10px;
+  aspect-ratio:1;
+  font-size:clamp(1.25rem,3.5vw,1.65rem);
+  cursor:pointer;
+  transition:background .15s,transform .12s;
+  line-height:1;
+}
+.kb-key:hover{background:#334155;transform:scale(1.06)}
+.kb-key:active{transform:scale(.96);background:#0891b2}
+.links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:16px 0 8px;
+  font-family:ui-sans-serif,system-ui,sans-serif;
+}
+.links a{
+  display:inline-block;
+  padding:8px 12px;
+  background:#fff;
+  border:1px solid #e2e8f0;
+  border-radius:999px;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:600;
+  color:#0f172a;
+}
+.links a:hover{border-color:#22d3ee;color:#0891b2}
 table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:20px;
+  width:100%;
+  border-collapse:collapse;
+  margin:16px 0 8px;
+  font-family:ui-sans-serif,system-ui,sans-serif;
+  font-size:.95rem;
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid #e2e8f0;
 }
-
-table th,
-table td{
-    border:1px solid #ddd;
-    padding:12px;
-    text-align:left;
+th,td{padding:12px 14px;text-align:left;border-bottom:1px solid #e2e8f0}
+th{background:#ecfeff;color:#0f172a;font-weight:700}
+td:first-child{font-size:1.35rem;width:64px}
+tr:last-child td{border-bottom:none}
+.faq details{
+  background:#fff;
+  border:1px solid #e2e8f0;
+  border-radius:10px;
+  padding:14px 16px;
+  margin-bottom:10px;
 }
-
-table th{
-    background:#eef2ff;
+.faq summary{
+  font-family:ui-sans-serif,system-ui,sans-serif;
+  font-weight:700;
+  cursor:pointer;
+  color:#0f172a;
 }
-
+.faq details p{margin:10px 0 0;font-size:1rem}
 footer{
-    background:#111827;
-    color:#fff;
-    text-align:center;
-    padding:40px 20px;
+  background:#020617;
+  color:#94a3b8;
+  text-align:center;
+  padding:36px 20px 48px;
+  font-family:ui-sans-serif,system-ui,sans-serif;
+  font-size:14px;
 }
-
-footer a{
-    color:#60a5fa;
-}
-
+footer a{color:#67e8f9}
 #topBtn{
-    position:fixed;
-    right:25px;
-    bottom:25px;
-    width:48px;
-    height:48px;
-    border:none;
-    border-radius:50%;
-    background:#2563eb;
-    color:#fff;
-    cursor:pointer;
-    display:none;
-    font-size:18px;
-}
-
-a{
-    color:#2563eb;
+  position:fixed;right:22px;bottom:22px;width:46px;height:46px;
+  border:none;border-radius:50%;background:#0891b2;color:#fff;
+  cursor:pointer;display:none;font-size:18px;z-index:20;
+  box-shadow:0 8px 20px rgba(8,145,178,.35);
 }
 </style>
-
 </head>
 <body>
 
 <header>
-
-<h1>😀 EmojiDB</h1>
-
-<p>
-EmojiDB is a free online emoji database that helps you search, copy, and explore thousands of emojis with detailed meanings, Unicode values, and categories.
-</p>
-
-<a class="btn" href="https://emojidb.info/" target="_blank" rel="noopener">
-Visit EmojiDB →
-</a>
-
+  <div class="wrap">
+    <p class="brand">emojidb.info</p>
+    <h1>EmojiDB</h1>
+    <p class="lead">
+      EmojiDB is a free online emoji database for searching, copying, and understanding Unicode emojis —
+      built so you spend less time hunting on a phone keyboard and more time expressing yourself clearly.
+    </p>
+    <a class="btn" href="https://emojidb.info/" target="_blank" rel="noopener">Open EmojiDB library</a>
+    <a class="btn btn-ghost" href="#emoji-keyboard">Try EmojiDB emoji keyboard</a>
+  </div>
 </header>
 
-<div class="container">
+<main>
+<div class="wrap">
+<article>
 
 <section>
-
 <h2>What is EmojiDB?</h2>
-
 <p>
-EmojiDB is a comprehensive emoji directory created for anyone who needs emojis quickly. Instead of scrolling through an emoji keyboard, users can search by keyword, browse categories, and instantly copy emojis for use on social media, messaging apps, documents, websites, and more.
+<strong>EmojiDB</strong> is a curated emoji database and copy-and-paste library published at
+<a href="https://emojidb.info/" target="_blank" rel="noopener">emojidb.info</a>.
+Instead of scrolling endlessly through a system emoji keyboard, EmojiDB organizes characters by keyword,
+mood, and common search intent — hearts, cute symbols, laugh reactions, flags, kaomoji, and more —
+so you can find the right glyph in seconds and paste it into WhatsApp, Instagram, Discord, TikTok, email, or docs.
+</p>
+<p>
+EmojiDB is designed for both everyday chatters and people who work with text professionally: social managers,
+creators, support teams, designers, and developers who need reliable Unicode characters without installing apps
+or creating accounts. Every collection on EmojiDB focuses on practical use — tap once, copy, paste —
+with related pages that deepen meaning and context rather than dumping an unsorted wall of faces.
+</p>
+</section>
+
+<section id="emoji-keyboard">
+<h2>EmojiDB emoji keyboard — top keyboard emojis</h2>
+<p>
+Phone keyboards surface the same high-frequency faces again and again. The EmojiDB emoji keyboard below
+mirrors those everyday favorites so you can copy them from the web when your device picker is slow,
+incomplete, or missing a variant. Tap any key to copy it to your clipboard. For fuller themed sets, open the
+matching EmojiDB collection pages linked under the board.
 </p>
 
+<div class="kb" role="group" aria-label="EmojiDB emoji keyboard">
+  <div class="kb-bar">
+    <span>EmojiDB keyboard</span>
+    <span class="kb-toast" id="kbToast" aria-live="polite"></span>
+  </div>
+  <div class="kb-grid" id="emojiKeyboard"></div>
+</div>
+
 <p>
-The platform also provides useful information such as emoji names, meanings, and Unicode code points, making it valuable for both everyday users and developers.
+Need more than the top row? Explore EmojiDB pages for
+<a href="https://emojidb.info/heart-emojis/" target="_blank" rel="noopener">heart emojis</a>,
+<a href="https://emojidb.info/laugh-emojis/" target="_blank" rel="noopener">laugh emojis</a>,
+<a href="https://emojidb.info/smiling-emojis/" target="_blank" rel="noopener">smiling emojis</a>,
+<a href="https://emojidb.info/kiss-emojis/" target="_blank" rel="noopener">kiss emojis</a>,
+<a href="https://emojidb.info/party-emojis/" target="_blank" rel="noopener">party emojis</a>, and
+<a href="https://emojidb.info/star-emojis/" target="_blank" rel="noopener">star emojis</a>.
+</p>
+</section>
+
+<section>
+<h2>Experience, Expertise, Authoritativeness &amp; Trustworthiness</h2>
+<p>
+Google’s quality guidance rewards content that demonstrates real-world experience, subject expertise,
+clear authority, and trustworthy presentation. EmojiDB is built around those same principles so people —
+and search engines — can evaluate the library with confidence.
+</p>
+<div class="eeat">
+  <div class="eeat-card">
+    <strong>Experience</strong>
+    <p>EmojiDB reflects how people actually chat: one-tap copy, mood boards, and keyword pages for captions, replies, and bios — not textbook-only definitions.</p>
+  </div>
+  <div class="eeat-card">
+    <strong>Expertise</strong>
+    <p>Collections group Unicode emojis, kaomoji, and symbols by intent, with names and related variants so meaning stays clear across platforms.</p>
+  </div>
+  <div class="eeat-card">
+    <strong>Authoritativeness</strong>
+    <p>EmojiDB publishes a large, navigable directory of focused pages instead of a single messy grid, making it easier to cite and revisit specific sets.</p>
+  </div>
+  <div class="eeat-card">
+    <strong>Trustworthiness</strong>
+    <p>EmojiDB is free to use, requires no account for core copy-paste, and documents privacy, about, and contact details openly on emojidb.info.</p>
+  </div>
+</div>
+<p>
+That E-E-A-T mindset shows up in small product choices: static, fast pages; clear labeling; related links that
+help you verify alternatives; and editorial care when assembling high-demand sets like
+<a href="https://emojidb.info/cute-emojis/" target="_blank" rel="noopener">cute emojis</a>,
+<a href="https://emojidb.info/cute-symbols-emojis/" target="_blank" rel="noopener">cute symbols</a>, and
+<a href="https://emojidb.info/emoji-combo-emojis/" target="_blank" rel="noopener">emoji combos</a>.
+When you land on an EmojiDB page, you should immediately understand what the page is for, how to copy a character,
+and where to go next if you need a neighboring mood or meaning.
+</p>
+</section>
+
+<section>
+<h2>How the EmojiDB database is organized</h2>
+<p>
+EmojiDB structures discovery around searchable keyword collections rather than forcing you to memorize
+Unicode names. Popular EmojiDB destinations include romance and affection sets such as
+<a href="https://emojidb.info/heart-emojis/" target="_blank" rel="noopener">heart emojis</a>,
+<a href="https://emojidb.info/heart-emoji-pinks/" target="_blank" rel="noopener">pink heart emojis</a>,
+<a href="https://emojidb.info/copy-and-paste-heart-emojis/" target="_blank" rel="noopener">copy and paste heart</a>,
+and <a href="https://emojidb.info/broken-heart-emojis/" target="_blank" rel="noopener">broken heart emojis</a>;
+reaction sets like
+<a href="https://emojidb.info/blush-emojis/" target="_blank" rel="noopener">blush</a>,
+<a href="https://emojidb.info/wink-emojis/" target="_blank" rel="noopener">wink</a>, and
+<a href="https://emojidb.info/rolling-eyes-emojis/" target="_blank" rel="noopener">rolling eyes</a>;
+and expressive niche boards such as
+<a href="https://emojidb.info/freaky-emojis/" target="_blank" rel="noopener">freaky emojis</a> and
+<a href="https://emojidb.info/scary-emojis/" target="_blank" rel="noopener">scary emojis</a>.
+</p>
+<p>
+Text-art fans can open
+<a href="https://emojidb.info/kaomoji-emojis/" target="_blank" rel="noopener">kaomoji on EmojiDB</a>
+for Japanese-style faces that go beyond standard smileys. Creators who need platform shorthand can check
+<a href="https://emojidb.info/tiktok-emoji-codes/" target="_blank" rel="noopener">TikTok emoji codes</a>
+and <a href="https://emojidb.info/snapchat-emoji-meanings/" target="_blank" rel="noopener">Snapchat emoji meanings</a>.
+A full index lives on the
+<a href="https://emojidb.info/all-pages/" target="_blank" rel="noopener">EmojiDB all pages</a> directory.
 </p>
 
+<div class="links">
+  <a href="https://emojidb.info/cute-symbols-emojis/" target="_blank" rel="noopener">Cute symbols</a>
+  <a href="https://emojidb.info/heart-emojis/" target="_blank" rel="noopener">Heart emojis</a>
+  <a href="https://emojidb.info/emoji-combo-emojis/" target="_blank" rel="noopener">Emoji combos</a>
+  <a href="https://emojidb.info/cute-emojis/" target="_blank" rel="noopener">Cute emojis</a>
+  <a href="https://emojidb.info/smiling-emojis/" target="_blank" rel="noopener">Smiling</a>
+  <a href="https://emojidb.info/cool-emojis/" target="_blank" rel="noopener">Cool emojis</a>
+  <a href="https://emojidb.info/rose-emojis/" target="_blank" rel="noopener">Rose emojis</a>
+  <a href="https://emojidb.info/american-flag-emojis/" target="_blank" rel="noopener">American flag</a>
+  <a href="https://emojidb.info/kaomoji-emojis/" target="_blank" rel="noopener">Kaomoji</a>
+  <a href="https://emojidb.info/all-pages/" target="_blank" rel="noopener">All EmojiDB pages</a>
+</div>
 </section>
 
 <section>
-
-<h2>Why Use EmojiDB?</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>🔍 Fast Search</h3>
-<p>Find any emoji in seconds using keyword search.</p>
-</div>
-
-<div class="card">
-<h3>📋 Copy & Paste</h3>
-<p>Copy emojis instantly with a single click.</p>
-</div>
-
-<div class="card">
-<h3>📚 Meanings</h3>
-<p>Understand what every emoji represents.</p>
-</div>
-
-<div class="card">
-<h3>💻 Unicode</h3>
-<p>View Unicode values for developers and designers.</p>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Emoji Categories</h2>
-
-<div class="grid">
-
-<div class="card">😀 Smileys & Emotion</div>
-<div class="card">👨‍👩‍👧 People & Body</div>
-<div class="card">🐶 Animals & Nature</div>
-<div class="card">🍕 Food & Drink</div>
-<div class="card">⚽ Activities</div>
-<div class="card">✈️ Travel & Places</div>
-<div class="card">💡 Objects</div>
-<div class="card">❤️ Symbols & Flags</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Popular Emojis</h2>
-
+<h2>Popular keyboard emojis and common meanings</h2>
+<p>
+These characters dominate most mobile emoji keyboards. EmojiDB keeps them easy to reach and pairs them with
+deeper collection pages when you need variants or context.
+</p>
 <table>
-
-<tr>
-<th>Emoji</th>
-<th>Name</th>
-<th>Common Meaning</th>
-</tr>
-
-<tr>
-<td>😀</td>
-<td>Grinning Face</td>
-<td>Happiness and friendliness</td>
-</tr>
-
-<tr>
-<td>😂</td>
-<td>Face with Tears of Joy</td>
-<td>Laughter</td>
-</tr>
-
-<tr>
-<td>❤️</td>
-<td>Red Heart</td>
-<td>Love and affection</td>
-</tr>
-
-<tr>
-<td>🔥</td>
-<td>Fire</td>
-<td>Trending or amazing</td>
-</tr>
-
-<tr>
-<td>🎉</td>
-<td>Party Popper</td>
-<td>Celebration</td>
-</tr>
-
+  <thead>
+    <tr><th>Emoji</th><th>Name</th><th>Common use</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>😂</td><td>Face with Tears of Joy</td><td>Laughter, memes, “that’s hilarious”</td></tr>
+    <tr><td>❤️</td><td>Red Heart</td><td>Love, support, strong appreciation</td></tr>
+    <tr><td>😍</td><td>Smiling Face with Heart-Eyes</td><td>Adoration, crushes, hype for looks</td></tr>
+    <tr><td>🙏</td><td>Folded Hands</td><td>Thanks, please, respect, prayer</td></tr>
+    <tr><td>🔥</td><td>Fire</td><td>Trending, impressive, high energy</td></tr>
+    <tr><td>😭</td><td>Loudly Crying Face</td><td>Overwhelm, sadness, laughing-crying tone</td></tr>
+    <tr><td>👍</td><td>Thumbs Up</td><td>Agreement, approval, “got it”</td></tr>
+    <tr><td>✨</td><td>Sparkles</td><td>Aesthetic polish, magic, “new &amp; shiny”</td></tr>
+    <tr><td>🥰</td><td>Smiling Face with Hearts</td><td>Warm affection, soft love</td></tr>
+    <tr><td>💯</td><td>Hundred Points</td><td>Perfect score, full agreement</td></tr>
+  </tbody>
 </table>
-
 </section>
 
 <section>
-
-<h2>Who Uses EmojiDB?</h2>
-
-<p>EmojiDB is useful for:</p>
-
+<h2>Why people choose EmojiDB over scrolling a phone keyboard</h2>
+<p>
+System emoji keyboards are convenient on a phone, but they are limited when you need a specific variant,
+a longer combo, kaomoji, or a desktop workflow. EmojiDB solves that gap: search by keyword, open a focused board,
+stack characters in the on-site editor, and copy a finished string in one action. Favorites and mood packs
+help returning visitors skip the hunt entirely.
+</p>
+<p>
+EmojiDB also reduces ambiguity. A face that looks playful on one OS can feel different on another; named
+collections and related meanings help you pick intentionally. Whether you are writing a product caption,
+moderating community chat, or sending a careful reply, EmojiDB keeps the process transparent and fast.
+</p>
 <ul>
-<li>Developers</li>
-<li>Bloggers</li>
-<li>Students</li>
-<li>Content Creators</li>
-<li>Social Media Managers</li>
-<li>Digital Marketers</li>
-<li>Businesses</li>
-<li>Designers</li>
+  <li><strong>No install required</strong> — open EmojiDB in any modern browser.</li>
+  <li><strong>One-tap copy</strong> — designed for speed on phone and desktop.</li>
+  <li><strong>Keyword collections</strong> — match how people actually search for emojis.</li>
+  <li><strong>Related pages</strong> — move naturally between hearts, blush, combos, flags, and more.</li>
+  <li><strong>Honest documentation</strong> — read the
+    <a href="https://emojidb.info/about/" target="_blank" rel="noopener">EmojiDB about page</a>,
+    <a href="https://emojidb.info/privacy-policy/" target="_blank" rel="noopener">privacy policy</a>, and
+    <a href="https://emojidb.info/contact/" target="_blank" rel="noopener">contact</a> details anytime.</li>
 </ul>
-
 </section>
 
 <section>
-
-<h2>Visit EmojiDB</h2>
-
+<h2>Who EmojiDB is for</h2>
 <p>
-If you're looking for a fast and organized emoji database with search, copy & paste, Unicode values, emoji meanings, and categories, visit:
+EmojiDB serves students, creators, community managers, marketers, teachers, developers, and anyone who
+communicates online. If you have ever lost time searching for a pink heart, a specific laugh face, or a
+clean symbol for a bio, EmojiDB is the shortcut. Teams can bookmark high-traffic EmojiDB pages for brand
+tone; individuals can keep the emoji keyboard section of this guide handy when drafting messages on a laptop.
 </p>
-
 <p>
-<strong>
-<a href="https://emojidb.info/" target="_blank" rel="noopener">
-https://emojidb.info
-</a>
-</strong>
+Because EmojiDB is organized as many intent-focused URLs rather than one infinite scroll, it is also easier
+to share a precise set with a teammate — for example, send the
+<a href="https://emojidb.info/heart-symbol-emojis/" target="_blank" rel="noopener">heart symbol</a>
+page or the
+<a href="https://emojidb.info/handshake-emojis/" target="_blank" rel="noopener">handshake emojis</a>
+collection instead of a vague “find a nice emoji.”
 </p>
-
 </section>
 
+<section class="faq">
+<h2>EmojiDB FAQ</h2>
+<details open>
+  <summary>Is EmojiDB free?</summary>
+  <p>Yes. Core search and copy-paste on EmojiDB at emojidb.info are free and do not require an account.</p>
+</details>
+<details>
+  <summary>How is EmojiDB different from my phone’s emoji keyboard?</summary>
+  <p>EmojiDB adds keyword search, themed collections, kaomoji, combo building, and desktop-friendly copy — while the EmojiDB emoji keyboard still covers the top faces you expect from a phone picker.</p>
+</details>
+<details>
+  <summary>Can I use EmojiDB emojis on Instagram, WhatsApp, and Discord?</summary>
+  <p>Yes. EmojiDB copies standard Unicode characters that paste into major messaging and social apps, subject to each platform’s font support.</p>
+</details>
+<details>
+  <summary>Where can I browse every EmojiDB page?</summary>
+  <p>Visit the <a href="https://emojidb.info/all-pages/" target="_blank" rel="noopener">EmojiDB all pages directory</a> or start from the <a href="https://emojidb.info/" target="_blank" rel="noopener">EmojiDB homepage</a>.</p>
+</details>
+</section>
+
+<section>
+<h2>Start with EmojiDB</h2>
+<p>
+EmojiDB exists to make emoji discovery trustworthy and efficient: experienced in real chat habits, expert in
+Unicode organization, authoritative through a clear public directory, and trustworthy through transparent
+policies. Use the EmojiDB emoji keyboard above for instant favorites, then continue into full collections on
+<a href="https://emojidb.info/" target="_blank" rel="noopener">emojidb.info</a>
+when you need depth, variants, and meaning.
+</p>
+<p>
+<strong><a href="https://emojidb.info/" target="_blank" rel="noopener">Visit EmojiDB → https://emojidb.info</a></strong>
+</p>
+</section>
+
+</article>
 </div>
+</main>
 
 <footer>
-
-<p>
-© 2026 EmojiDB Guide
-</p>
-
-<p>
-Explore thousands of emojis at
-<a href="https://emojidb.info/" target="_blank" rel="noopener">
-EmojiDB.info
-</a>
-</p>
-
+  <p>© 2026 EmojiDB · Free emoji database &amp; emoji keyboard guide</p>
+  <p style="margin-top:10px">
+    Explore
+    <a href="https://emojidb.info/" target="_blank" rel="noopener">EmojiDB.info</a>
+    ·
+    <a href="https://emojidb.info/about/" target="_blank" rel="noopener">About</a>
+    ·
+    <a href="https://emojidb.info/privacy-policy/" target="_blank" rel="noopener">Privacy</a>
+    ·
+    <a href="https://emojidb.info/contact/" target="_blank" rel="noopener">Contact</a>
+  </p>
 </footer>
 
-<button id="topBtn">↑</button>
+<button id="topBtn" aria-label="Back to top">↑</button>
 
 <script>
-const topBtn=document.getElementById("topBtn");
+/* Top keyboard / most-used chat emojis — EmojiDB emoji keyboard */
+const KEYBOARD_EMOJIS = [
+  "😂","❤️","😍","🤣","😊","🙏","💕","😭","😘","👍",
+  "😅","👏","🔥","🥰","😁","🤔","💖","😉","😎","🎉",
+  "✨","💯","😢","🤗","🙄","😏","💔","😌","😜","👀",
+  "💜","💙","💗","🖤","🤍","💛","💚","🧡","🌹","💀",
+  "👑","💪","🫶","🤝","💋","🌸","⭐","🌟","✅","🙌"
+];
 
-window.addEventListener("scroll",()=>{
-    topBtn.style.display=window.scrollY>300?"block":"none";
+const grid = document.getElementById("emojiKeyboard");
+const toast = document.getElementById("kbToast");
+let toastTimer;
+
+KEYBOARD_EMOJIS.forEach((emoji) => {
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "kb-key";
+  btn.textContent = emoji;
+  btn.setAttribute("aria-label", "Copy " + emoji);
+  btn.addEventListener("click", async () => {
+    let ok = false;
+    try {
+      await navigator.clipboard.writeText(emoji);
+      ok = true;
+    } catch {
+      const ta = document.createElement("textarea");
+      ta.value = emoji;
+      ta.style.position = "fixed";
+      ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.select();
+      ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+    }
+    if (!ok) return;
+    toast.textContent = "Copied " + emoji;
+    toast.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove("show"), 1200);
+  });
+  grid.appendChild(btn);
 });
 
-topBtn.addEventListener("click",()=>{
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
+const topBtn = document.getElementById("topBtn");
+window.addEventListener("scroll", () => {
+  topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+});
+topBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 </script>
 
